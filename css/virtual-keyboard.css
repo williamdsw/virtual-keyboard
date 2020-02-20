@@ -1,0 +1,202 @@
+body
+{
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #131313;
+}
+
+/* Message box */
+.box 
+{
+    width: 30em;
+    height: 5em;
+    background-color: #383838;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+/* Message box content */
+.box-content 
+{
+    width: auto;
+    height: 100%;
+    font-size: x-large;
+    color: white;
+    font-family: inherit;
+    overflow: auto;
+    text-align: center;
+}
+
+/* keyboard itself */
+.keyboard
+{
+    background-color: #5f5f5f;
+    box-shadow: 5px 5px rgba(84, 84, 84, 0.5);
+    width: 69em;
+    height: 16em;
+    padding: 10px;
+    margin: 10px auto;
+    user-select: none;
+}
+
+/* default layout for containers */
+.layout { margin: 5px; float: left; }
+
+/* wasd... 74x5 */
+.container-wasd
+{
+    display: grid;
+    grid-template-columns: repeat(74, 10px);
+    grid-template-rows: repeat(5, 40px);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+/* functions */
+.container-functions
+{
+    display: grid;
+    grid-template-columns: repeat(109, 10px);
+    grid-column-gap: 0px;
+}
+
+/* numbers 19x5 */
+.container-numbers
+{
+    display: grid;
+    grid-template-columns: repeat(19, 10px);
+    grid-template-rows: repeat(5, 40px);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    text-align: center;
+}
+
+.container-numbers .num-lock { font-size: 10px; line-height: initial; }
+.container-numbers .other { font-size: larger; line-height: 32px; }
+.container-numbers .enter { grid-row: auto / span 2; line-height: 82px; }
+
+/* commands */
+.container-commands
+{
+    display: grid;
+    grid-template-columns: repeat(14, 10px);
+    grid-template-rows: repeat(5, 40px);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.container-commands div { font-size: 10px; text-align: center; }
+
+/* default key */
+.key 
+{
+    background-color: #313131;
+    color: white;
+    border: 1px solid #000;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    line-height: 11px;
+    padding: 3px;
+    font-size: small;
+}
+
+/* hovered */
+.key:hover
+{
+    background-color: #797979;
+    color: white;
+    box-shadow: 2px 2px rgba(0,0,0,0.5);
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+/* clicked */
+.key:active { background-color: #c5c5c5; color: black; }
+
+/* triggered by event */
+.key-pressed
+{
+    background-color: #a22121;
+    color: #fff;
+    box-shadow: 0 0 3px 3px rgba(221, 210, 108, 0.986);
+}
+
+
+/* key-columns */
+.key-1 { grid-column: auto / span 1; }
+.key-2 { grid-column: auto / span 2; }
+.key-3 { grid-column: auto / span 3; }
+.key-4 { grid-column: auto / span 4; }
+.key-5 { grid-column: auto / span 5; }
+.key-6 { grid-column: auto / span 6; }
+.key-7 { grid-column: auto / span 7; }
+.key-8 { grid-column: auto / span 8; }
+.key-9 { grid-column: auto / span 9; }
+
+/* specials keys */
+.space  { grid-column: auto / span 30; }
+.return { padding: 10px; }
+
+.key-command
+{
+    font-size: smaller;
+    line-height: 32px;
+    text-align: center;
+}
+
+/* only 1 label for key */
+.key-single
+{
+    line-height: 11px;
+    padding: 3px;
+}
+
+/* 2 or more labels for key */
+.key-multiple
+{
+    font-size: smaller;
+    line-height: 11px;
+}
+
+/* height for container-commands */
+.one-word { line-height: 30px; }
+.two-words { line-height: 9px; }
+.three-words { line-height: 6px; }
+
+/* arrows */
+.key-arrow { line-height: 28px; font-size: large !important; }
+
+/* mobile */
+@media only screen and (max-width: 500px)
+{
+    body { width: fit-content; margin: 0; }
+    .box  { width: 100%; padding: 1px; box-sizing: border-box; }
+
+    .keyboard 
+    { 
+        box-sizing: border-box;
+        box-shadow: none;
+        width: 100%;
+        height: 38rem;
+        padding: 5px;
+        padding-right: 0;
+    }
+
+    .layout { width: fit-content; margin: 0; }
+    .layout:nth-child(2) { margin-right: 55px; }
+    .layout:nth-child(3) { margin-left: 55px; }
+    .container-wasd { grid-template-columns: repeat(50, 9px); grid-template-rows: repeat(5, 40px); }
+    .key-5 { grid-column: auto / span 4; }
+    .key-6 { grid-column: auto / span 5; margin-left: 8px; }
+    .key-7 { grid-column: auto / span 4; }
+    .key-8 { grid-column: auto / span 10; }
+    .key-9 { grid-column: auto / span 4; }
+    .key-command { font-size: 10px; }
+    .space { grid-column: auto / span 29; }
+    #CapsLock { margin-left: 10px; }
+    #ControlRight { margin-left: 0; margin-right: 9px; }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1024px)
+{
+    body { width: fit-content; }
+}

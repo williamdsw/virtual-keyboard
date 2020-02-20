@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="HTML CSS Virtual Keyboard">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Virtual, Keyboard, Event">
+        <meta name="author" content="William Santos">
+        <meta name="generator" content="Visual Studio Code">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/virtual-keyboard.css" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans" />
+        <link rel="shortcut icon" href="icons/favicon.ico" />
+        <title> Virtual Keyboard </title>
+    </head>
+    <body>
+
+        <!-- Key output -->
+        <div class="box">
+            <div id="content" class="box-content">
+                <p> Press any key! </p>
+            </div>
+        </div>
+
+        <div class="keyboard">
+
+            <!-- WASD ... -->
+            <div class="layout">
+                <div class="container-wasd">
+
+                    <!-- === FIRST ROW === -->
+
+                    <!-- BACKQUOTE -->
+                    <div id="Backquote" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>"</td></tr>
+                            <tr><td>'</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMBERS... -->
+
+                    <!-- DIGIT1 -->
+                    <div id="Digit1" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#33;</td></tr>
+                            <tr><td>&#49;</td><td>¹</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+                    
+                    <!-- DIGIT2 -->
+                    <div id="Digit2" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#64;</td></tr>
+                            <tr><td>&#50;</td><td>²</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- DIGIT3 -->
+                    <div id="Digit3" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#35;</td></tr>
+                            <tr><td>&#51;</td><td>³</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- DIGIT4 -->
+                    <div id="Digit4" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#36;</td></tr>
+                            <tr><td>&#52;</td><td>&pound;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- DIGIT5 -->
+                    <div id="Digit5" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#37;</td></tr>
+                            <tr><td>&#53;</td><td>&cent;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- DIGIT6 -->
+                    <div id="Digit6" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&uml;</td></tr>
+                            <tr><td>&#54;</td><td>&not;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- DIGIT7 -->
+                    <div id="Digit7" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&amp;</td></tr>
+                            <tr><td>&#55;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- DIGIT8 -->
+                    <div id="Digit8" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#42;</td></tr>
+                            <tr><td>&#56;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- DIGIT9 -->
+                    <div id="Digit9" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#40;</td></tr>
+                            <tr><td>&#57;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- DIGIT0 -->
+                    <div id="Digit0" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#41;</td></tr>
+                            <tr><td>&#54;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- MINUS -->
+                    <div id="Minus" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>_</td></tr>
+                            <tr><td>-</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- EQUAL / PLUS -->
+                    <div id="Equal" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&plus;</td></tr>
+                            <tr><td>&equals;</td><td>&sect;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- BACKSPACE -->
+                    <div id="Backspace" class="key key-9 return">&larr;</div>
+
+                    <!-- === END FIRST ROW === -->
+
+
+                    <!-- === SECOND ROW === -->
+
+                    <!-- TAB -->
+                    <div id="Tab" class="key key-6 key-command"> Tab </div>
+                    <div class="key-1"></div>
+
+                    <!-- QWERTY... -->
+                    <div id="KeyQ" id="" class="key key-4"> Q </div>
+                    <div class="key-1"></div>
+                    <div id="KeyW" id="" class="key key-4"> W </div>
+                    <div class="key-1"></div>
+                    <div id="KeyE" id="" class="key key-4"> E </div>
+                    <div class="key-1"></div>
+                    <div id="KeyR" id="" class="key key-4"> R </div>
+                    <div class="key-1"></div>
+                    <div id="KeyT" id="" class="key key-4"> T </div>
+                    <div class="key-1"></div>
+                    <div id="KeyY" id="" class="key key-4"> Y </div>
+                    <div class="key-1"></div>
+                    <div id="KeyU" id="" class="key key-4"> U </div>
+                    <div class="key-1"></div>
+                    <div id="KeyI" id="" class="key key-4"> I </div>
+                    <div class="key-1"></div>
+                    <div id="KeyO" id="" class="key key-4"> O </div>
+                    <div class="key-1"></div>
+                    <div id="KeyP" id="" class="key key-4"> P </div>
+                    <div class="key-1"></div>
+
+                    <!-- BACKET LEFT -->
+                    <div id="BracketLeft" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>`</td></tr>
+                            <tr><td>´</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- BRACKET RIGHT -->
+                    <div id="BracketRight" id="" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#123;</td></tr>
+                            <tr><td>&#91;</td><td>ª</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- ENTER -->
+                    <div id="Enter" class="key key-7 key-command"> Enter </div>
+
+                    <!-- === END SECOND ROW === -->
+
+                    
+                    <!-- === THIRD ROW === -->
+                    <!-- CapsLock -->
+                    <div id="CapsLock" class="key key-8 key-command"> CapsLock </div> 
+                    <div class="key-1"></div>
+
+                    <!-- ASDF... -->
+                    <div id="KeyA" class="key key-4"> A </div>
+                    <div class="key-1"></div>
+                    <div id="KeyS" class="key key-4"> S </div>
+                    <div class="key-1"></div>
+                    <div id="KeyD" class="key key-4"> D </div>
+                    <div class="key-1"></div>
+                    <div id="KeyF" class="key key-4"> F </div>
+                    <div class="key-1"></div>
+                    <div id="KeyG" class="key key-4"> G </div>
+                    <div class="key-1"></div>
+                    <div id="KeyH" class="key key-4"> H </div>
+                    <div class="key-1"></div>
+                    <div id="KeyJ" class="key key-4"> J </div>
+                    <div class="key-1"></div>
+                    <div id="KeyK" class="key key-4"> K </div>
+                    <div class="key-1"></div>
+                    <div id="KeyL" class="key key-4"> L </div>
+                    <div class="key-1"></div>
+                    <div id="Semicolon" class="key key-4"> Ç </div>
+                    <div class="key-1"></div>
+
+                    <!-- QUOTE -->
+                    <div id="Quote" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&circ;</td></tr>
+                            <tr><td>&tilde;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- BACKSLASH -->
+                    <div id="Backslash" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#125;</td></tr>
+                            <tr><td>&#93;</td><td>º</td></tr>
+                        </table>
+                    </div>
+
+                    <!-- BLANK -->
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+
+                    <!-- === END THIRD ROW === -->
+
+
+                    <!-- === FOURTH ROW === -->
+
+                    <!-- Shift Left -->
+                    <div id="ShiftLeft" class="key key-5 key-command"> Shift </div> 
+                    <div class="key-1"></div>
+
+                    <!-- INTL BACKSLASH -->
+                    <div id="IntlBackslash" class="key key-4 key-multiple">
+                            <table>
+                                <tr><td>&#124;</td></tr>
+                                <tr><td>&#92;</td></tr>
+                            </table>
+                        </div>
+                    <div class="key-1"></div>
+
+                    <!-- ZXCV... -->
+                    <div id="KeyZ" class="key key-4"> Z </div>
+                    <div class="key-1"></div>
+                    <div id="KeyX" class="key key-4"> X </div>
+                    <div class="key-1"></div>
+                    <div id="KeyC" class="key key-4"> C </div>
+                    <div class="key-1"></div>
+                    <div id="KeyV" class="key key-4"> V </div>
+                    <div class="key-1"></div>
+                    <div id="KeyB" class="key key-4"> B </div>
+                    <div class="key-1"></div>
+                    <div id="KeyN" class="key key-4"> N </div>
+                    <div class="key-1"></div>
+                    <div id="KeyM" class="key key-4"> M </div>
+                    <div class="key-1"></div>
+
+                    <!-- COMMA -->
+                    <div id="Comma" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&lt;</td></tr>
+                            <tr><td>&#44;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- PERIOD-->
+                    <div id="Period" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&gt;</td></tr>
+                            <tr><td>.</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- SLASH -->
+                    <div id="Slash" class="key key-4 key-multiple">
+                        <table>
+                            <tr><td>&#58;</td></tr>
+                            <tr><td>&#59;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- INTLRO -->
+                    <div id="IntlRo" class="key key-7 key-multiple">
+                        <table>
+                            <tr><td>&#63;</td></tr>
+                            <tr><td>&#47;</td><td>&ordm;</td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- SHIFT RIGHT -->
+                    <div id="ShiftRight" class="key key-5 key-command"> Shift </div> 
+
+                    <!-- === END FOURTH ROW === -->
+
+
+                    <!-- === FIFTH ROW === -->
+                    <!-- CONTROL LEFT -->
+                    <div id="ControlLeft" class="key key-6 key-command"> Ctrl </div> 
+                    <div class="key-1"></div>
+
+                    <!-- META LEFT (WIN) -->
+                    <div id="MetaLeft" class="key key-5 key-command"> Win </div>
+                    <div class="key-1"></div>
+
+                    <!-- ALT LEFT -->
+                    <div id="AltLeft" class="key key-5 key-command"> Alt </div>
+                    <div class="key-1"></div>
+
+                    <!-- SPACE -->
+                    <div id="Space" class="key space"></div>
+                    <div class="key-1"></div>
+                    
+                    <!-- ALT RIGHT -->
+                    <div id="AltRight" class="key key-5 key-command"> Alt Gr </div>
+                    <div class="key-1"></div>
+
+                    <!-- META RIGHT (WIN) -->
+                    <div id="MetaRight" class="key key-5 key-command"> Win </div>
+                    <div class="key-1"></div>
+
+                    <!-- CONTEXT MENU -->
+                    <div id="ContextMenu" class="key key-5 key-command"> Print </div>
+                    <div class="key-1"></div>
+
+                    <!-- CONTROL RIGHT -->
+                    <div id="ControlRight" class="key key-6 key-command"> Ctrl </div> 
+                    <div class="key-1"></div>
+
+                    <!-- === END FIFTH ROW === -->
+                </div>
+            </div>
+            <!-- END WASD -->
+
+
+            <!-- COMMANDS -->
+            <div class="layout">
+                <div class="container-commands">
+
+                    <!-- === FIRST ROW === -->
+
+                    <!-- PRINT SCREEN -->
+                    <div id="PrintScreen" class="key key-4 three-words">
+                        <table>
+                            <tr><td> Print </td></tr>
+                            <tr><td> Screen </td></tr>
+                            <tr><td> SysRq </td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- SCROLL LOCK -->                    
+                    <div id="ScrollLock" class="key key-4 two-words">
+                        <table>
+                            <tr><td> Scroll </td></tr>
+                            <tr><td> Lock </td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- PAUSE -->
+                    <div id="Pause" class="key key-4 two-words">
+                        <table>
+                            <tr><td> Pause </td></tr>
+                            <tr><td> Break </td></tr>
+                        </table>
+                    </div>
+
+                    <!-- === END FIRST ROW === -->
+
+
+                    <!-- === SECOND ROW === -->
+
+                    <!-- INSERT -->
+                    <div id="Insert" class="key key-4 one-word"> Insert </div>
+                    <div class="key-1"></div>
+
+                    <!-- HOME -->
+                    <div id="Home" class="key key-4 one-word"> Home </div>
+                    <div class="key-1"></div>
+
+                    <!-- PAGE UP -->
+                    <div id="PageUp" class="key key-4 two-words">
+                        <table>
+                            <tr><td> Page </td></tr>
+                            <tr><td> Up </td></tr>
+                        </table>
+                    </div>
+
+                    <!-- DELETE -->
+                    <div id="Delete" class="key key-4 one-word"> Delete </div>
+                    <div class="key-1"></div>
+
+                    <!-- END -->
+                    <div id="End" class="key key-4 one-word"> End </div>
+                    <div class="key-1"></div>
+
+                    <!-- PAGE DOWN -->
+                    <div id="PageDown" class="key key-4 two-words">
+                        <table>
+                            <tr><td> Page </td></tr>
+                            <tr><td> Down </td></tr>
+                        </table>
+                    </div>
+
+                    <!-- === END SECOND ROW === -->
+
+
+                    <!-- === THIRD ROW === -->
+                    <!-- BLANK -->
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+
+                    <!-- ARROW UP -->
+                    <div id="ArrowUp" class="key key-4 key-arrow"> &uarr; </div>
+
+                    <!-- BLANK -->
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+                    <div class="key-1"></div>
+
+                    <!-- ARROW LEFT -->
+                    <div id="ArrowLeft" class="key key-4 key-arrow"> &larr; </div>
+                    <div class="key-1"></div>
+
+                    <!-- ARROW DOWN -->
+                    <div id="ArrowDown" class="key key-4 key-arrow"> &darr; </div>
+                    <div class="key-1"></div>
+
+                    <!-- ARROW RIGHT -->
+                    <div id="ArrowRight" class="key key-4 key-arrow"> &rarr; </div>
+                    <div class="key-1"></div>
+
+                </div>
+            </div>
+            <!-- END COMMANDS -->
+
+
+            <!-- NUMBERS -->
+            <div class="layout">
+                <div class="container-numbers">
+
+                    <!-- === FIRST ROW === -->
+
+                    <!-- NUM LOCK -->
+                    <div id="NumLock" class="key key-4 num-lock">
+                        <table>
+                            <tr><td> Num </td></tr>
+                            <tr><td> Lock </td></tr>
+                        </table>
+                    </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD DIVIDE -->
+                    <div id="NumpadDivide" class="key key-4 other"> / </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD MULTIPLY -->
+                    <div id="NumpadMultiply" class="key key-4 other"> * </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD SUBSTRACT -->
+                    <div id="NumpadSubtract" class="key key-4 other"> - </div>
+
+                    <!-- === END FIRST ROW === -->
+
+
+                    <!-- === SECOND ROW === -->
+
+                    <!-- NUMPAD 7 -->
+                    <div id="Numpad7" class="key key-4 other"> 7 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD 8 -->
+                    <div id="Numpad8" class="key key-4 other"> 8 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD 9 -->
+                    <div id="Numpad9" class="key key-4 other"> 9 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD ADD -->
+                    <div id="NumpadAdd" class="key key-4 other"> + </div>
+
+                    <!-- === END SECOND ROW === -->
+
+
+                    <!-- === THIRD ROW === -->
+
+                    <!-- NUMPAD 4 -->
+                    <div id="Numpad4" class="key key-4 other"> 4 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD 5 -->
+                    <div id="Numpad5" class="key key-4 other"> 5 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD 6 -->
+                    <div id="Numpad6" class="key key-4 other"> 6 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD COMMA -->
+                    <div id="NumpadComma" class="key key-4 other"> . </div>
+
+                    <!-- === END THIRD ROW === -->
+
+
+                    <!-- === FOURTH ROW === -->
+
+                    <!-- NUMPAD 1 -->
+                    <div id="Numpad1" class="key key-4 other"> 1 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD 2 -->
+                    <div id="Numpad2" class="key key-4 other"> 2 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD 3 -->
+                    <div id="Numpad3" class="key key-4 other"> 3 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD ENTER -->
+                    <div id="NumpadEnter" class="key key-4 other enter"> &crarr; </div>
+
+                    <!-- === END FOURTH ROW === -->
+
+
+                    <!-- === FIFTH ROW === -->
+
+                    <!-- NUMPAD 0 -->
+                    <div id="Numpad0" class="key key-9 other"> 0 </div>
+                    <div class="key-1"></div>
+
+                    <!-- NUMPAD DECIMAL -->
+                    <div id="NumpadDecimal" class="key key-4 other"> , </div>
+                    <div class="key-1"></div>
+
+                    <!-- === END FIFTH ROW === -->
+
+                </div>
+            </div>
+            <!-- END NUMBERS -->
+        </div>
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/virtual-keyboard.js"></script>
+    </body>
+</html>
