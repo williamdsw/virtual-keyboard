@@ -1,0 +1,240 @@
+
+/* || Global */
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #131313;
+    color: white;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h1, h2 {
+    text-align: center;
+    text-shadow: 2px 2px 15px white;
+}
+
+/* || Key message box */
+.box {
+    width: 30em;
+    height: 5em;
+    background-color: #383838;
+    margin: 10px auto;
+}
+
+.box-content {
+    width: auto;
+    height: 100%;
+    font-size: x-large;
+    color: white;
+    font-family: inherit;
+    overflow: auto;
+    text-align: center;
+}
+
+/* || Key History */
+
+.history {
+    width: 80%;
+    padding: 0;
+    padding: 1rem;
+    margin: 1rem auto;
+    box-shadow: inset 1px 1px 40px black,
+                5px 5px 10px rgba(256,256,256,0.1);
+}
+
+.history p {
+    margin: 0;
+}
+
+.history p > span {
+    color: rgb(172, 172, 172);
+    font-style: italic;
+    margin: 3px;
+}
+
+/* || Span Link */
+
+.span-link a {
+    color: rgba(221, 210, 108, 0.986);
+}
+
+.span-link a:visited {
+    color: rgba(179, 169, 82, 0.986);
+}
+
+/* || Keyboard */
+
+.keyboard {
+    background-color: #5f5f5f;
+    box-shadow: 5px 5px rgba(84, 84, 84, 0.5);
+    width: 69em;
+    height: 16em;
+    padding: 10px;
+    margin: 10px auto;
+    user-select: none;
+}
+
+.layout { 
+    margin: 5px; 
+    float: left; 
+}
+
+.container-wasd {
+    display: grid;
+    grid-template-columns: repeat(74, 10px);
+    grid-template-rows: repeat(5, 40px);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.container-functions {
+    display: grid;
+    grid-template-columns: repeat(109, 10px);
+    grid-column-gap: 0px;
+}
+
+.container-numbers {
+    display: grid;
+    grid-template-columns: repeat(19, 10px);
+    grid-template-rows: repeat(5, 40px);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    text-align: center;
+}
+
+.container-numbers .num-lock { 
+    font-size: 10px; 
+    line-height: initial; 
+}
+
+.container-numbers .other { 
+    font-size: larger; line-height: 32px; 
+}
+
+.container-numbers .enter { 
+    grid-row: auto / span 2; line-height: 82px; 
+}
+
+.container-commands {
+    display: grid;
+    grid-template-columns: repeat(14, 10px);
+    grid-template-rows: repeat(5, 40px);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.container-commands div { 
+    font-size: 10px; 
+    text-align: center; 
+}
+
+.key  {
+    background-color: #313131;
+    color: white;
+    border: 1px solid #000;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    line-height: 11px;
+    padding: 3px;
+    font-size: small;
+}
+
+.key:hover {
+    background-color: #797979;
+    color: white;
+    box-shadow: 2px 2px rgba(0,0,0,0.5);
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.key:active { 
+    background-color: #c5c5c5; 
+    color: black; 
+}
+
+.key-pressed {
+    background-color: #a22121;
+    color: #fff;
+    box-shadow: 0 0 3px 3px rgba(221, 210, 108, 0.986);
+}
+
+.key-1 { 
+    grid-column: auto / span 1; 
+}
+
+.key-2 { 
+    grid-column: auto / span 2; 
+}
+
+.key-3 { 
+    grid-column: auto / span 3; 
+}
+
+.key-4 { 
+    grid-column: auto / span 4; 
+}
+
+.key-5 { 
+    grid-column: auto / span 5; 
+}
+
+.key-6 { 
+    grid-column: auto / span 6; 
+}
+
+.key-7 { 
+    grid-column: auto / span 7; 
+}
+
+.key-8 { 
+    grid-column: auto / span 8; 
+}
+
+.key-9 { 
+    grid-column: auto / span 9; 
+}
+
+.space  { 
+    grid-column: auto / span 30; 
+}
+
+.return { 
+    padding: 10px; 
+}
+
+.key-command
+{
+    font-size: smaller;
+    line-height: 32px;
+    text-align: center;
+}
+
+.key-single {
+    line-height: 11px;
+    padding: 3px;
+}
+
+.key-multiple {
+    font-size: smaller;
+    line-height: 11px;
+}
+
+.one-word { 
+    line-height: 30px; 
+}
+
+.two-words { 
+    line-height: 9px; 
+}
+
+.three-words { 
+    line-height: 6px; 
+}
+
+.key-arrow { 
+    line-height: 28px; 
+    font-size: large !important; 
+}
